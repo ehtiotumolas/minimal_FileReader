@@ -1,0 +1,31 @@
+{
+  "name": "minimal",
+  "version": "1.8.5",
+  "description": "minimal",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "h@asdfasfasdfasf1212",
+      "strict_min_version": "42.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "all_frames": false,
+      "js": ["/static/contentScript.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["static/background.js"]
+  },
+  "action": {
+    "default_title": "minimal",
+    "default_popup": "templates/popup.html"
+  },
+  "manifest_version": 3
+}
